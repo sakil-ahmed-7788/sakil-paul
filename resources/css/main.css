@@ -1,0 +1,570 @@
+
+/*Template Name: Paul Lapkin
+Template URI: https://www.moshiur.dev/projects/paul-lapkin/
+Author: Moshiur
+Author URI: https://moshiur.me
+Version: 1.0
+Description: A simple html5 portfolio template.
+
+====================== */
+
+/* ======================
+
+    CSS INDEX
+    =========
+
+    0. Google Fonts
+    1. Common CSS
+    2. Reusuable Components
+    3. Hero
+    4. About
+    5. warking page
+    6. experience page
+    7. WORK SAMPLIE/PORTFOLIO
+    8. TESTMONIAL
+    9. CONTACT
+    10. footer
+
+====================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+
+
+/* Common CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    color: #000;
+    background-color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    font-size: 62.5%;
+    line-height: 1.3;   
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* Reusuable Components */
+section{
+    margin: 12rem 0;
+}
+.row {
+    max-width: 118rem;
+    margin:auto;
+}
+h5{
+    font-size: 1.8rem;
+  color: #000;
+}
+p{
+    font-size: 1.6rem;
+  color: #000;
+}
+
+
+.btn{
+    background-color: #ff2b4a;
+    border: .2rem solid #ff2b4a;
+    color: #fff;
+    text-transform: capitalize;
+    width: 20rem;
+    display:inline-block ;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    font-size: 1.6rem;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: transparent;
+    color:#ff2b4a ;
+}
+
+
+.section-tittle{
+    text-align: center;
+    margin-bottom:6rem ;
+}
+.section-tittle h2{
+    font-size: 4rem;
+    color: #000;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+h3{
+    font-size: 2.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 6.5rem;
+    
+}
+h4{
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+h5
+{
+    font-size: 1.8rem;
+    color: #000;
+}
+h6 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+/*animation*/
+@keyframes arrow{
+    0%{
+        top: 1rem;
+    }
+    60%{
+        top: 3rem;
+    }
+    100%{
+        top: 1rem;
+    }
+}
+
+/* ======================
+
+   Hero
+
+====================== */
+#hero{
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7) ) , url(img/hero.jpg) no-repeat center /cover;
+    padding: 9rem 0;
+    position: relative;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+.logo{
+    float: left;
+
+}
+.menu{
+    float: right;
+}
+.menu a ion-icon{
+    color: #fff;
+    font-size: 4.5rem;
+    border: .1rem solid #fff;
+}
+.logo a img{
+    height: 4.5rem;
+}
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    max-width: 118rem;
+    text-align: center;
+    width: 100%;
+
+}
+.hero-text-box h1{
+    font-size: 6.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin: 3rem 0;
+    display: inline-block;
+}
+.hero-text-box h1::after{
+    content: '';
+    display: block;
+    height: .2rem;
+    background-color: #fff;
+    width: 100%;
+}
+.hero-text-box h1::before{
+    content: '';
+    display: block;
+    height: .2rem;
+    background-color: #fff;
+    width: 100%;
+    
+}
+.hero-text-box span{
+    font-size: 2.5rem;
+    color: #fff;
+
+}
+.next-section a {
+    position: absolute;
+    bottom: 9rem;
+}
+.next-section a ion-icon{
+    color: #fff;
+    font-size: 4.5rem;
+    position: relative;
+    animation:arrow 2s infinite ease-in-out;
+   
+}
+.next-section {
+    text-align: center;
+}
+/*navigation*/
+
+
+.menu-container{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+.menu-container{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position:fixed;
+    display: none;
+}
+.menu-container ul{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    position: absolute;
+}
+.menu-container ul li a{
+    color: #fff;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    transition: .3s;  
+}
+.menu-container ul li{
+    margin: 1.5rem 0;
+}
+.menu-container ul li:hover a{
+    color: #ff2b4a;
+    font-size: 3.3rem;
+
+}
+.close-btn a{
+    position: absolute;
+    top: 4.5rem;
+    right: 5rem;
+}
+.close-btn a ion-icon{
+    color: #ffff;
+    font-size: 4.9em;
+}
+#particles-js canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+nav.uk-sticky-fixed{
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    background-color:rgba( 0,0,0,0.9 ) ;
+    padding: 1.5rem 0;
+}
+
+
+
+/* ======================
+
+   About
+
+====================== */
+.paul{clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+}
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:6rem;
+}
+.about-grid-item img{
+    width: 100%;
+
+}
+.about-grid-item p{
+    margin: 4.5rem 0;
+
+}
+.about-cta-btn{
+    margin-top:4.5rem ;
+}
+
+/* ======================
+
+   warking
+
+
+====================== */
+#proces{
+    background: color #f6f6f6;;
+}
+.proces-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.proces-grid-item{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 9rem 0;
+
+}
+.proces-grid-item h4{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+}
+.proces-icon{
+    margin-bottom: 4.5rem;
+}
+.proces-icon ion-icon{
+    font-size: 4.5rem;
+}
+.proces-grid-item:nth-child(1){
+    background-color: #435aeb;
+}
+.proces-grid-item:nth-child(2){
+    background-color: #10c6fc;
+}
+.proces-grid-item:nth-child(3){
+    background-color: #002453;
+}
+.proces-grid-item:nth-child(4){
+    background-color: #ff2b4a;
+}
+
+
+/* ======================
+
+   experience
+
+
+====================== */
+#exp{
+    background: #000 url(img/experience.jpg) no-repeat center /cover fixed;
+
+}
+.exp-grid{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 1rem;
+}
+.exp-grid-item{
+    background-color: rgba(0,0,0,0.7);
+    padding: 4.5rem;
+}
+
+.job span{
+    color: #fff;
+    font-size: 1.6rem;
+}
+.job p{
+    margin: 2.5rem 0;
+    color: #fff;
+}
+hr{
+    border: 0;
+    border-bottom: .1rem solid #fff;
+    margin-bottom: 2.5rem;
+}
+
+
+
+/* ======================
+
+   WORKSAMPLE/PORTFOLIO
+
+
+====================== */
+.work-filter{
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.work-filter button{
+    background-color: #000;
+    color: #fff;
+    cursor:pointer;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+    border: 0;
+    margin: 5px 0.5rem;
+
+}
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.work-grid-item{
+    height: 27rem;
+}
+.work-grid-item img{
+    width: 100%;
+    height: 100%;
+
+}
+.work-grid-item:nth-child(5){
+    grid-column: 1/3;
+}
+button.mixitup-control-active{
+    background-color: #ff2b4a;
+}
+.uk-lightbox-caption{
+    font-size: 1.6rem;
+}
+.uk-lightbox{
+    background-color: rgba(0,0,0,0.8)!important;
+}
+/* ======================
+
+   TESTMONIAL
+
+
+====================== */
+#tm{
+    background: #000 url(img/testimonial.jpg) no-repeat top /cover;
+}
+.tm-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 5rem ;
+    padding-bottom: 25rem ;
+}
+.quote{
+    height: 4.5rem;
+}
+.tm-grid-item p{
+    width:85%;
+    margin: 4.5rem 0;
+}
+.signature{
+    height: 4.5rem;
+}
+.tm-grid-item h4{
+    color: #000;
+    margin-top: 3.5rem;
+}
+.role{
+    font-size: 2.6rem;
+}
+
+/* ======================
+
+   CONTACT
+
+
+====================== */
+#contact{
+    background: #000 url(img/contact.jpg) no-repeat center /cover fixed;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.contact-grid-item:nth-child(1),
+.nested-contact-grid-item{
+    background-color:rgba(0,0,0,0.75);
+    padding: 4.5rem;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea{
+border: .2rem solid #fff;
+color: #fff;
+background-color: transparent;
+font-size: 1.6rem;
+padding: 1rem 1.5rem;
+width:100%;
+margin: 1rem 0;
+
+}
+form textarea{
+    height: 20rem;
+}
+.contact-cta-btn{
+    text-align: center;
+    margin-top: 2.5rem;
+
+}
+.nested-contact-grid{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 1rem;
+}
+
+.nested-contact-grid-item p{
+    color: #fff;
+}
+/* ======================
+
+   footer
+
+
+====================== */
+#footer{
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #222222;
+
+}
+.social-list ul li{
+    list-style-type: none;
+    display: inline-block;
+
+}
+.social-list ul li a ion-icon{
+    color: #fff;
+    font-size: 3.5rem;
+    border-right: .2rem solid #fff;
+    padding: 0 2rem;
+}
+.social-list ul li:hover a ion-icon{
+    color: #ff2b4a;
+}
+.social-list ul li:last-child a ion-icon{
+    border-right: 0;
+}
+.copy-right{
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.link{
+    color: #fff;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
